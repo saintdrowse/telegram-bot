@@ -28,6 +28,8 @@ def help(update, context):
 def kafedra(update, context):
     update.callback_query.message.reply_text('Прекрасная кафедра')
     
+def umovy(update, context):
+    update.callback_query.message.reply_text('Обери підпункт, який тобі цікавиий')
     
 def teachers(update, context):
     update.callback_query.message.reply_text('...')
@@ -58,6 +60,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CallbackQueryHandler(kafedra, pattern = "kafedra"))
+    dp.add_handler(CallbackQueryHandler(umovy, pattern = 'umovy'))
     
     dp.add_handler(CallbackQueryHandler(teachers, pattern = 'teachers'))
     dp.add_handler(CallbackQueryHandler(education, pattern = 'education'))
