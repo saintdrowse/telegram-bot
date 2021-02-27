@@ -46,7 +46,17 @@ def classrooms(update, context):
 def graduates(update, context):
     update.callback_query.message.reply_text('...')
 
+def mozhluv(update, context):
+    
+    kb1 = [[InlineKeyboardButton('Проєктне навчання',callback_data = (''))],
+          [InlineKeyboardButton('Дуальна освіта', callback_data = (''))],
+          [InlineKeyboardButton('Працевлаштування',callback_data = (''))],
+          [InlineKeyboardButton('Практика',callback_data = (''))]]
+    reply = InlineKeyboardMarkup(kb1)
+    update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо?', reply_markup = reply)
 
+
+    
 def error(update, context):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, context.error)
@@ -61,6 +71,7 @@ def main():
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CallbackQueryHandler(kafedra, pattern = "kafedra"))
     dp.add_handler(CallbackQueryHandler(umovy, pattern = 'umovy'))
+    dp.add_handler(CallbackQueryHandler(mozhluv, pattern = 'mozhluv'))
     
     dp.add_handler(CallbackQueryHandler(teachers, pattern = 'teachers'))
     dp.add_handler(CallbackQueryHandler(education, pattern = 'education'))
