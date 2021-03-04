@@ -2,7 +2,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # This program is dedicated to the public domain under the CC0 license.
-# ```222
 import logging
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CallbackQueryHandler, CommandHandler, MessageHandler, Filters
@@ -27,37 +26,44 @@ def help(update, context):
     update.message.reply_text('Help!')
 
 def kafedra(update, context):
-    update.callback_query.message.reply_text('Прекрасная кафедра')
     
-def umovy(update, context):
-    update.callback_query.message.reply_text('Обери підпункт, який тобі цікавиий')
+    kb = [[InlineKeyboardButton("Викладачі",callback_data = "vikladachu")],
+           [InlineKeyboardButton("Принципи навчання на кафедрі",callback_data = "prictsipi")],
+           [InlineKeyboardButton("Історія кафедри",callback_data = "istoria")],
+           [InlineKeyboardButton("Аудиторії кафедрии",callback_data = "auditoria")],
+           [InlineKeyboardButton("Наші випускники",callback_data = "vipuskniki")]]
+    reply = InlineKeyboardMarkup(kb)
+    update.callback_query.message.reply_text("З чого почнемо?",reply_markup = reply)
+def vikladachu(update, context):
     
-def teachers(update, context):
-    update.callback_query.message.reply_text('...')
-
-def education(update, context):
-    update.callback_query.message.reply_text('...')
-
-def history(update, context):
-    update.callback_query.message.reply_text('...')
-
-def classrooms(update, context):
-    update.callback_query.message.reply_text('...')
-
-def graduates(update, context):
-    update.callback_query.message.reply_text('...')
-
+def prictsipi(update, context):
+    
+def istoria(update, context):
+    
+def auditoria(update, context):
+   
+def vipuskniki(update, context):
+    
+   
 def mozhluv(update, context):
-    
-    kb1 = [[InlineKeyboardButton('Проєктне навчання',callback_data = (''))],
-          [InlineKeyboardButton('Дуальна освіта', callback_data = (''))],
-          [InlineKeyboardButton('Працевлаштування',callback_data = (''))],
-          [InlineKeyboardButton('Практика',callback_data = (''))]]
-    reply = InlineKeyboardMarkup(kb1)
-    update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо?', reply_markup = reply)
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def umovy(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def proect(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def osvita(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def prahe(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def practik(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
 
 
-    
 def error(update, context):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, context.error)
@@ -71,14 +77,18 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CallbackQueryHandler(kafedra, pattern = "kafedra"))
-    dp.add_handler(CallbackQueryHandler(umovy, pattern = 'umovy'))
-    dp.add_handler(CallbackQueryHandler(mozhluv, pattern = 'mozhluv'))
-    
-    dp.add_handler(CallbackQueryHandler(teachers, pattern = 'teachers'))
-    dp.add_handler(CallbackQueryHandler(education, pattern = 'education'))
-    dp.add_handler(CallbackQueryHandler(history, pattern = 'history'))
-    dp.add_handler(CallbackQueryHandler(classrooms, pattern = 'classrooms'))
-    dp.add_handler(CallbackQueryHandler(graduates, pattern = 'graduates'))
+    dp.add_handler(CallbackQueryHandler(mozhluv,pattern = "mozhluv"))
+    dp.add_handler(CallbackQueryHandler(umovy,pattern = "umovy"))
+    dp.add_handler(CallbackQueryHandler(proect,pattern = "proect"))
+    dp.add_handler(CallbackQueryHandler(osvita,pattern = "osvita"))
+    dp.add_handler(CallbackQueryHandler(prahe,pattern = "prahe"))
+    dp.add_handler(CallbackQueryHandler(practik,pattern = "practik"))
+    dp.add_handler(CallbackQueryHandler(vikladachu,pattern ="kafedra"))
+    dp.add_handler(CallbackQueryHandler(prictsipi,pattern ="kafedra"))
+    dp.add_handler(CallbackQueryHandler(istoria,pattern ="kafedra"))
+    dp.add_handler(CallbackQueryHandler(auditoria,pattern ="kafedra"))
+    dp.add_handler(CallbackQueryHandler(vipuskniki,pattern ="kafedra"))
+
 
     dp.add_error_handler(error)
 
