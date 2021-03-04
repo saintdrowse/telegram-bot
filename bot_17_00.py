@@ -1,5 +1,6 @@
 #-------laska2
 #!/usr/bin/env python
+#____laska
 # -*- coding: utf-8 -*-
 # This program is dedicated to the public domain under the CC0 license.
 import logging
