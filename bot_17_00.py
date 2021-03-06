@@ -62,28 +62,34 @@ def mozhluv(update, context):
 
 
 def umovy(update, context):
-    update.callback_query.message.reply_text("Прекрасная кафедра")
+    update.callback_query.message.reply_text("...")
 
 def proect(update, context):
-    update.callback_query.message.reply_text("Прекрасная кафедра")
+    update.callback_query.message.reply_text("...")
 
 def osvita(update, context):
-    update.callback_query.message.reply_text("Прекрасная кафедра")
+    update.callback_query.message.reply_text("...")
 
 def prahe(update, context):
-    update.callback_query.message.reply_text("Прекрасная кафедра")
+    update.callback_query.message.reply_text("...")
 
 def practik(update, context):
-    update.callback_query.message.reply_text("Прекрасная кафедра")
+    update.callback_query.message.reply_text("...")
     
 def zno(update, context):
-    update.callback_query.message.reply_text("Прекрасная кафедра")
+    update.callback_query.message.reply_text("..."))
 
 def bali(update, context):
-    update.callback_query.message.reply_text("Прекрасная кафедра")
+    update.callback_query.message.reply_text("...")
 
 def vstup(update, context):
-    update.callback_query.message.reply_text("Прекрасная кафедра")
+    update.callback_query.message.reply_text("...")
+    
+def posilannya(update, context):
+    update.callback_query.message.reply_text("...")
+
+def kontract(update, context):
+    update.callback_query.message.reply_text("...")
     
     
 def teachers(update, context):
@@ -121,9 +127,11 @@ def main():
     dp.add_handler(CallbackQueryHandler(osvita,pattern = "osvita"))
     dp.add_handler(CallbackQueryHandler(prahe,pattern = "prahe"))
     dp.add_handler(CallbackQueryHandler(practik,pattern = "practik"))
-    dp.add_handler(CommandHandler("zno", zno))
-    dp.add_handler(CommandHandler("bali", bali))
-    dp.add_handler(CommandHandler("vstup", vstup))
+    dp.add_handler(CallbackQueryHandler(zno, pattern = "zno"))
+    dp.add_handler(CallbackQueryHandler(bali, pattern = "bali"))
+    dp.add_handler(CallbackQueryHandler(vstup, pattern = "vstup"))
+    dp.add_handler(CallbackQueryHandler(posilannya, pattern = "posilannya"))
+    dp.add_handler(CallbackQueryHandler(kontract, pattern = "kontract"))
     dp.add_handler(CallbackQueryHandler(teachers, pattern = 'teachers'))
     dp.add_handler(CallbackQueryHandler(education, pattern = 'education'))
     dp.add_handler(CallbackQueryHandler(history, pattern = 'history'))
