@@ -52,7 +52,14 @@ def umovy(update, context):
     
    
 def mozhluv(update, context):
-    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+    kb1 = [[InlineKeyboardButton('Проєктне навчання',callback_data = (''))],
+          [InlineKeyboardButton('Дуальна освіта', callback_data = (''))],
+          [InlineKeyboardButton('Працевлаштування',callback_data = (''))],
+          [InlineKeyboardButton('Практика',callback_data = (''))]]
+    reply = InlineKeyboardMarkup(kb1)
+    update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо?', reply_markup = reply)
+
 
 def umovy(update, context):
     update.callback_query.message.reply_text("Прекрасная кафедра")
