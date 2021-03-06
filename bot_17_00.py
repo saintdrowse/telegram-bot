@@ -3,9 +3,12 @@
 #____laska
 # -*- coding: utf-8 -*-
 # This program is dedicated to the public domain under the CC0 license.
+import urllib.request
 import logging
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CallbackQueryHandler, CommandHandler, MessageHandler, Filters
+
+link = 'https://ulkabo.github.io/bot-KMAD-17-00/data/'
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -13,7 +16,13 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-
+def read_content(link_file):
+  url_flie = urllib.request.urlopen(link_file)
+  text =url_file.read().decode( encoding = 'utf-8')
+  return text
+  
+  
+  
 def start(update, context):
     kb = [[InlineKeyboardButton("Кафедра КМАД", callback_data = "kafedra")],
           [InlineKeyboardButton("Можливості для студентів", callback_data = "mozhluv")],
@@ -80,7 +89,9 @@ def zno(update, context):
     update.callback_query.message.reply_text("..."))
 
 def bali(update, context):
-    update.callback_query.message.reply_text("...")
+    content = read_content(link + 'bali.txt')
+    
+    update.callback_query.message.reply_text(content)
 
 def vstup(update, context):
     update.callback_query.message.reply_text("...")
