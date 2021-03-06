@@ -53,10 +53,10 @@ def umovy(update, context):
    
 def mozhluv(update, context):
 
-    kb1 = [[InlineKeyboardButton('Проєктне навчання',callback_data = (''))],
-          [InlineKeyboardButton('Дуальна освіта', callback_data = (''))],
-          [InlineKeyboardButton('Працевлаштування',callback_data = (''))],
-          [InlineKeyboardButton('Практика',callback_data = (''))]]
+    kb1 = [[InlineKeyboardButton('Проєктне навчання',callback_data = ''))],
+          [InlineKeyboardButton('Дуальна освіта', callback_data = '')],
+          [InlineKeyboardButton('Працевлаштування',callback_data = '')],
+          [InlineKeyboardButton('Практика',callback_data = '')]]
     reply = InlineKeyboardMarkup(kb1)
     update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо?', reply_markup = reply)
 
