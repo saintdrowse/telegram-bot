@@ -35,15 +35,8 @@ def kafedra(update, context):
            [InlineKeyboardButton("Наші випускники",callback_data = "vipuskniki")]]
     reply = InlineKeyboardMarkup(kb)
     update.callback_query.message.reply_text("З чого почнемо?",reply_markup = reply)
-def vikladachu(update, context):
+
     
-def prictsipi(update, context):
-    
-def istoria(update, context):
-    
-def auditoria(update, context):
-   
-def vipuskniki(update, context):
     
    
 def mozhluv(update, context):
@@ -63,6 +56,22 @@ def prahe(update, context):
 
 def practik(update, context):
     update.callback_query.message.reply_text("Прекрасная кафедра")
+    
+    
+def teachers(update, context):
+    update.callback_query.message.reply_text('...')
+
+def education(update, context):
+    update.callback_query.message.reply_text('...')
+
+def history(update, context):
+    update.callback_query.message.reply_text('...')
+
+def classrooms(update, context):
+    update.callback_query.message.reply_text('...')
+
+def graduates(update, context):
+    update.callback_query.message.reply_text('...')
 
 
 def error(update, context):
@@ -84,11 +93,13 @@ def main():
     dp.add_handler(CallbackQueryHandler(osvita,pattern = "osvita"))
     dp.add_handler(CallbackQueryHandler(prahe,pattern = "prahe"))
     dp.add_handler(CallbackQueryHandler(practik,pattern = "practik"))
-    dp.add_handler(CallbackQueryHandler(vikladachu,pattern ="kafedra"))
-    dp.add_handler(CallbackQueryHandler(prictsipi,pattern ="kafedra"))
-    dp.add_handler(CallbackQueryHandler(istoria,pattern ="kafedra"))
-    dp.add_handler(CallbackQueryHandler(auditoria,pattern ="kafedra"))
-    dp.add_handler(CallbackQueryHandler(vipuskniki,pattern ="kafedra"))
+    
+    dp.add_handler(CallbackQueryHandler(teachers, pattern = 'teachers'))
+    dp.add_handler(CallbackQueryHandler(education, pattern = 'education'))
+    dp.add_handler(CallbackQueryHandler(history, pattern = 'history'))
+    dp.add_handler(CallbackQueryHandler(classrooms, pattern = 'classrooms'))
+    dp.add_handler(CallbackQueryHandler(graduates, pattern = 'graduates'))
+
 
 
     dp.add_error_handler(error)
