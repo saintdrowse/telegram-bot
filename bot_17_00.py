@@ -83,11 +83,16 @@ def prahe(update, context):
     update.callback_query.message.reply_text("...")
 
 def practik(update, context):
-    update.callback_query.message.reply_text("...")
+    content = read_content(link + 'practik.txt')
+    
+    update.callback_query.message.reply_text(content)
+
     
 def zno(update, context):
-    update.callback_query.message.reply_text("..."))
-
+  content = read_content(link + 'zno.txt')
+  
+  update.callback_query.message.reply_text(content)
+    
 def bali(update, context):
     content = read_content(link + 'bali.txt')
     
@@ -110,12 +115,10 @@ def prinzipi(update, context):
     update.callback_query.message.reply_text('...')
 
 def istoria(update, context):
-    content = read_content(link + 'istoria.txt')
-    update.callback_query.message.reply_text(content)
+    update.callback_query.message.reply_text('...')
 
 def auditoriyi(update, context):
-    content = read_content(link + 'auditoriyi.txt')
-    update.callback_query.message.reply_text(content)
+    update.callback_query.message.reply_text('...')
 
 def vipuskniki(update, context):
     update.callback_query.message.reply_text('...')
