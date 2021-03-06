@@ -29,9 +29,9 @@ def help(update, context):
 def kafedra(update, context):
     
     kb = [[InlineKeyboardButton("Викладачі",callback_data = "vikladachu")],
-           [InlineKeyboardButton("Принципи навчання на кафедрі",callback_data = "prictsipi")],
+           [InlineKeyboardButton("Принципи навчання на кафедрі",callback_data = "prinzipi")],
            [InlineKeyboardButton("Історія кафедри",callback_data = "istoria")],
-           [InlineKeyboardButton("Аудиторії кафедрии",callback_data = "auditoria")],
+           [InlineKeyboardButton("Аудиторії кафедрии",callback_data = "auditoriyi")],
            [InlineKeyboardButton("Наші випускники",callback_data = "vipuskniki")]]
     reply = InlineKeyboardMarkup(kb)
     update.callback_query.message.reply_text("З чого почнемо?",reply_markup = reply)
@@ -39,11 +39,11 @@ def kafedra(update, context):
     
 def umovy(update, context):
     update.callback_query.message.reply_text('Обери підпункт, який тобі цікавиий')
-    kb =[[InlineKeyboardButton("Конкурсні предмети ЗНО", callback_data = "...")],
-        [InlineKeyboardButton("Розрахунок конкурсного балу", callback_data = "...")],
-        [InlineKeyboardButton("Етапи вступної кампанії", callback_data = "...")],
-        [InlineKeyboardButton("Корисні посилання", callback_data = "...")],
-        [InlineKeyboardButton("Кількість бюджетних та контрактних місць для вступників", callback_data = "...")],
+    kb =[[InlineKeyboardButton("Конкурсні предмети ЗНО", callback_data = "zno")],
+        [InlineKeyboardButton("Розрахунок конкурсного балу", callback_data = "bali")],
+        [InlineKeyboardButton("Етапи вступної кампанії", callback_data = "vstup")],
+        [InlineKeyboardButton("Корисні посилання", callback_data = "posilannya")],
+        [InlineKeyboardButton("Кількість бюджетних та контрактних місць для вступників", callback_data = "kontract")],
         ]
     reply = InlineKeyboardMarkup(kb)
     update.callback_query.message.reply_text("Обери підпункт, який тобі цікавиий",reply_markup = reply)    
@@ -53,10 +53,10 @@ def umovy(update, context):
    
 def mozhluv(update, context):
 
-    kb1 = [[InlineKeyboardButton('Проєктне навчання',callback_data = ''))],
-          [InlineKeyboardButton('Дуальна освіта', callback_data = '')],
-          [InlineKeyboardButton('Працевлаштування',callback_data = '')],
-          [InlineKeyboardButton('Практика',callback_data = '')]]
+    kb1 = [[InlineKeyboardButton('Проєктне навчання',callback_data = 'proect'))],
+          [InlineKeyboardButton('Дуальна освіта', callback_data = 'osvita')],
+          [InlineKeyboardButton('Працевлаштування',callback_data = 'prahe')],
+          [InlineKeyboardButton('Практика',callback_data = 'practik')]]
     reply = InlineKeyboardMarkup(kb1)
     update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо?', reply_markup = reply)
 
