@@ -76,6 +76,15 @@ def prahe(update, context):
 def practik(update, context):
     update.callback_query.message.reply_text("Прекрасная кафедра")
     
+def zno(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def bali(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def vstup(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+    
     
 def teachers(update, context):
     update.callback_query.message.reply_text('...')
@@ -112,7 +121,9 @@ def main():
     dp.add_handler(CallbackQueryHandler(osvita,pattern = "osvita"))
     dp.add_handler(CallbackQueryHandler(prahe,pattern = "prahe"))
     dp.add_handler(CallbackQueryHandler(practik,pattern = "practik"))
-    
+    dp.add_handler(CommandHandler("zno", zno))
+    dp.add_handler(CommandHandler("bali", bali))
+    dp.add_handler(CommandHandler("vstup", vstup))
     dp.add_handler(CallbackQueryHandler(teachers, pattern = 'teachers'))
     dp.add_handler(CallbackQueryHandler(education, pattern = 'education'))
     dp.add_handler(CallbackQueryHandler(history, pattern = 'history'))
