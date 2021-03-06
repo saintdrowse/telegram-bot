@@ -37,6 +37,18 @@ def kafedra(update, context):
     update.callback_query.message.reply_text("З чого почнемо?",reply_markup = reply)
 
     
+def umovy(update, context):
+    update.callback_query.message.reply_text('Обери підпункт, який тобі цікавиий')
+    kb =[[InlineKeyboardButton("Конкурсні предмети ЗНО", callback_data = "...")],
+        [InlineKeyboardButton("Розрахунок конкурсного балу", callback_data = "...")],
+        [InlineKeyboardButton("Етапи вступної кампанії", callback_data = "...")],
+        [InlineKeyboardButton("Корисні посилання", callback_data = "...")],
+        [InlineKeyboardButton("Кількість бюджетних та контрактних місць для вступників", callback_data = "...")],
+        ]
+    reply = InlineKeyboardMarkup(kb)
+    update.callback_query.message.reply_text("Обери підпункт, який тобі цікавиий",reply_markup = reply)    
+
+    
     
    
 def mozhluv(update, context):
