@@ -92,19 +92,19 @@ def kontract(update, context):
     update.callback_query.message.reply_text("...")
     
     
-def teachers(update, context):
+def vikladachi(update, context):
     update.callback_query.message.reply_text('...')
 
-def education(update, context):
+def prinzipi(update, context):
     update.callback_query.message.reply_text('...')
 
-def history(update, context):
+def istoria(update, context):
     update.callback_query.message.reply_text('...')
 
-def classrooms(update, context):
+def auditoriyi(update, context):
     update.callback_query.message.reply_text('...')
 
-def graduates(update, context):
+def vipuskniki(update, context):
     update.callback_query.message.reply_text('...')
 
 
@@ -124,11 +124,11 @@ def main():
     dp.add_handler(CallbackQueryHandler(mozhluv,pattern = "mozhluv"))
     dp.add_handler(CallbackQueryHandler(umovy,pattern = "umovy"))
     
-    dp.add_handler(CallbackQueryHandler(teachers, pattern = 'teachers'))
-    dp.add_handler(CallbackQueryHandler(education, pattern = 'education'))
-    dp.add_handler(CallbackQueryHandler(history, pattern = 'history'))
-    dp.add_handler(CallbackQueryHandler(classrooms, pattern = 'classrooms'))
-    dp.add_handler(CallbackQueryHandler(graduates, pattern = 'graduates'))
+    dp.add_handler(CallbackQueryHandler(vikladachi, pattern = 'vikladachi'))
+    dp.add_handler(CallbackQueryHandler(prinzipi, pattern = 'prinzipi'))
+    dp.add_handler(CallbackQueryHandler(istoria, pattern = 'istoria'))
+    dp.add_handler(CallbackQueryHandler(auditoriyi, pattern = 'auditoriyi'))
+    dp.add_handler(CallbackQueryHandler(vipuskniki, pattern = 'vipuskniki'))
     
     dp.add_handler(CallbackQueryHandler(proect,pattern = "proect"))
     dp.add_handler(CallbackQueryHandler(osvita,pattern = "osvita"))
