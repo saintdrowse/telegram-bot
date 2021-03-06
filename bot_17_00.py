@@ -123,20 +123,24 @@ def main():
     dp.add_handler(CallbackQueryHandler(kafedra, pattern = "kafedra"))
     dp.add_handler(CallbackQueryHandler(mozhluv,pattern = "mozhluv"))
     dp.add_handler(CallbackQueryHandler(umovy,pattern = "umovy"))
-    dp.add_handler(CallbackQueryHandler(proect,pattern = "proect"))
-    dp.add_handler(CallbackQueryHandler(osvita,pattern = "osvita"))
-    dp.add_handler(CallbackQueryHandler(prahe,pattern = "prahe"))
-    dp.add_handler(CallbackQueryHandler(practik,pattern = "practik"))
-    dp.add_handler(CallbackQueryHandler(zno, pattern = "zno"))
-    dp.add_handler(CallbackQueryHandler(bali, pattern = "bali"))
-    dp.add_handler(CallbackQueryHandler(vstup, pattern = "vstup"))
-    dp.add_handler(CallbackQueryHandler(posilannya, pattern = "posilannya"))
-    dp.add_handler(CallbackQueryHandler(kontract, pattern = "kontract"))
+    
     dp.add_handler(CallbackQueryHandler(teachers, pattern = 'teachers'))
     dp.add_handler(CallbackQueryHandler(education, pattern = 'education'))
     dp.add_handler(CallbackQueryHandler(history, pattern = 'history'))
     dp.add_handler(CallbackQueryHandler(classrooms, pattern = 'classrooms'))
     dp.add_handler(CallbackQueryHandler(graduates, pattern = 'graduates'))
+    
+    dp.add_handler(CallbackQueryHandler(proect,pattern = "proect"))
+    dp.add_handler(CallbackQueryHandler(osvita,pattern = "osvita"))
+    dp.add_handler(CallbackQueryHandler(prahe,pattern = "prahe"))
+    dp.add_handler(CallbackQueryHandler(practik,pattern = "practik"))
+    
+    dp.add_handler(CallbackQueryHandler(zno, pattern = "zno"))
+    dp.add_handler(CallbackQueryHandler(bali, pattern = "bali"))
+    dp.add_handler(CallbackQueryHandler(vstup, pattern = "vstup"))
+    dp.add_handler(CallbackQueryHandler(posilannya, pattern = "posilannya"))
+    dp.add_handler(CallbackQueryHandler(kontract, pattern = "kontract"))
+
 
 
 
