@@ -119,10 +119,12 @@ def prinzipi(update, context):
     update.callback_query.message.reply_text(content)
 
 def istoria(update, context):
-    update.callback_query.message.reply_text('...')
+    content = read_content(link + 'istoria.txt')
+    update.callback_query.message.reply_text(content)
 
 def auditoriyi(update, context):
-    update.callback_query.message.reply_text('...')
+    content = read_content(link + 'auditoriyi.txt')
+    update.callback_query.message.reply_text(content)
 
 def vipuskniki(update, context):
     update.callback_query.message.reply_text('...')
