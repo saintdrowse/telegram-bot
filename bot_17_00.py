@@ -109,12 +109,12 @@ def kontract(update, context):
     
     
 def vikladachi(update, context):
-  content = read_content(link + 'vikladachi.txt')
-  update.callback_query.message.reply_text(content)
+    content = read_content(link + 'vikladachi.txt')
+    update.callback_query.message.reply_text(content)
 
 def prinzipi(update, context):
-  content = read_content(link + 'prinzipi.txt')
-  update.callback_query.message.reply_text(content)
+    content = read_content(link + 'prinzipi.txt')
+    update.callback_query.message.reply_text(content)
 
 def istoria(update, context):
     content = read_content(link + 'istoria.txt')
