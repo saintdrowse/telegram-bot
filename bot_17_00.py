@@ -72,7 +72,7 @@ def mozhluv(update, context):
 
 def proect(update, context):
     content = read_content(link + 'proect.txt')
-    update.callback_query.message.reply_text("...")
+    update.callback_query.message.reply_text(content)
 
 def osvita(update, context):
     content = read_content(link + 'osvita.txt')
@@ -91,17 +91,16 @@ def practik(update, context):
 
     
 def zno(update, context):
-  content = read_content(link + 'zno.txt')
-  
-  update.callback_query.message.reply_text(content)
+    content = read_content(link + 'zno.txt')
+    update.callback_query.message.reply_text(content)
     
 def bali(update, context):
     content = read_content(link + 'bali.txt')
-    
     update.callback_query.message.reply_text(content)
 
 def vstup(update, context):
-    update.callback_query.message.reply_text("...")
+    content = read_content(link + 'vstup.txt')
+    update.callback_query.message.reply_text(content)
     
 def posilannya(update, context):
     content = read_content(link + 'posilannya.txt')
@@ -132,7 +131,7 @@ def auditoriyi(update, context):
 
 def vipuskniki(update, context):
     content = read_content(link + 'vipuskniki.txt')
-    update.callback_query.message.reply_text('...')
+    update.callback_query.message.reply_text(content)
 
 
 def error(update, context):
