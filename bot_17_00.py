@@ -77,10 +77,14 @@ def proect(update, context):
     update.callback_query.message.reply_text("...")
 
 def osvita(update, context):
-    update.callback_query.message.reply_text("...")
+    content = read_content(link + 'osvita.txt')
+    
+    update.callback_query.message.reply_text(content)
 
 def prahe(update, context):
-    update.callback_query.message.reply_text("...")
+    content = read_content(link + 'prahe.txt')
+    
+    update.callback_query.message.reply_text(content)
 
 def practik(update, context):
     content = read_content(link + 'practik.txt')
@@ -89,9 +93,9 @@ def practik(update, context):
 
     
 def zno(update, context):
-    content = read_content(link + 'zno.txt')
+  content = read_content(link + 'zno.txt')
   
-    update.callback_query.message.reply_text(content)
+  update.callback_query.message.reply_text(content)
     
 def bali(update, context):
     content = read_content(link + 'bali.txt')
