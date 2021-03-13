@@ -106,10 +106,14 @@ def vstup(update, context):
     update.callback_query.message.reply_text("...")
     
 def posilannya(update, context):
-    update.callback_query.message.reply_text("...")
+    content = read_content(link + 'posilannya.txt')
+    
+    update.callback_query.message.reply_text(content)
 
 def kontract(update, context):
-    update.callback_query.message.reply_text("...")
+    content = read_content(link + 'kontract.txt')
+    
+    update.callback_query.message.reply_text(content)
     
     
 def vikladachi(update, context):
