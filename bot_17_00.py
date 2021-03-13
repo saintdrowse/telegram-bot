@@ -70,10 +70,8 @@ def mozhluv(update, context):
     update.callback_query.message.reply_text('У нас є багато цікавих можливостей для студентів. З чого почнемо?', reply_markup = reply)
 
 
-def umovy(update, context):
-    update.callback_query.message.reply_text("...")
-
 def proect(update, context):
+    content = read_content(link + 'proect.txt')
     update.callback_query.message.reply_text("...")
 
 def osvita(update, context):
@@ -103,7 +101,6 @@ def bali(update, context):
     update.callback_query.message.reply_text(content)
 
 def vstup(update, context):
-    content = read_content(link + 'vstup.txt')
     update.callback_query.message.reply_text("...")
     
 def posilannya(update, context):
@@ -134,6 +131,7 @@ def auditoriyi(update, context):
     update.callback_query.message.reply_text(content)
 
 def vipuskniki(update, context):
+    content = read_content(link + 'vipuskniki.txt')
     update.callback_query.message.reply_text('...')
 
 
@@ -178,6 +176,9 @@ def main():
     # Start the Bot
     updater.start_polling()
 
+    # Run the bot until you press Ctrl-C or the process receives SIGINT,
+    # SIGTERM or SIGABRT. This should be used most of the time, since
+    # start_polling() is non-blocking and will stop the bot gracefully.
     updater.idle()
 
 
