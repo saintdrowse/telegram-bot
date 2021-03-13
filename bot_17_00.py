@@ -103,6 +103,7 @@ def bali(update, context):
     update.callback_query.message.reply_text(content)
 
 def vstup(update, context):
+    content = read_content(link + 'vstup.txt')
     update.callback_query.message.reply_text("...")
     
 def posilannya(update, context):
