@@ -89,9 +89,9 @@ def practik(update, context):
 
     
 def zno(update, context):
-  content = read_content(link + 'zno.txt')
+    content = read_content(link + 'zno.txt')
   
-  update.callback_query.message.reply_text(content)
+    update.callback_query.message.reply_text(content)
     
 def bali(update, context):
     content = read_content(link + 'bali.txt')
